@@ -2,7 +2,11 @@
 
 """
 sets up Blueprint to be access by other files
+
+Authors: Bradley Dillion Gilden & Kevin KevCare Mokobane
+Date: 29-10-2023
 """
+
 
 from flask import Blueprint
 
