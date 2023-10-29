@@ -72,16 +72,17 @@ def post_review(place_id):
 
 @app_views.route('/reviews/<review_id>', strict_slashes=False,
                  methods=['PUT'])
-def put_review(place_id):
+def put_review(review_id):
     """adds new review object to filestorage/database"""
-    review = storage.get(Place, place_id)
+    review = storage.get(Review, review_id)
     if review is None:
         abort(404)
     json_body = request.get_json()
     if json_body is None:
         return make_response(jsonify({"error": "Not a JSON"}), 400)
     for key, value in json_body.items():
-        if key not in {'id', 'created_at', 'updated_at'}:
+        if key not in {'id', 'user_id', 'place_id',
+                       'created_at', 'updated_at'}:
             setattr(review, key, value)
     review.save()
     return make_response(jsonify(review.to_dict()), 200)
