@@ -3,8 +3,8 @@
 """
 a view for City objects that handles all default RESTFul API actions
 
-Author: Bradley Dillion Gilden
-Date: 27-10-2023
+Authors: Bradley Dillion Gilden & Kevin KevCare Mokobane
+Date: 29-10-2023
 """
 
 
