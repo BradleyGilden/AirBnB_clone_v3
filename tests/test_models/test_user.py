@@ -20,14 +20,14 @@ class TestUserDocs(unittest.TestCase):
         """Set up for the doc tests"""
         cls.user_f = inspect.getmembers(User, inspect.isfunction)
 
-    def test_pep8_conformance_user(self):
+    def test_pep_formatting_user(self):
         """Test that models/user.py conforms to PEP8."""
         pep8s = pep8.StyleGuide(quiet=True)
         result = pep8s.check_files(['models/user.py'])
         self.assertEqual(result.total_errors, 0,
                          "Found code style errors (and warnings).")
 
-    def test_pep8_conformance_test_user(self):
+    def test_pep_formatting_test_user(self):
         """Test that tests/test_models/test_user.py conforms to PEP8."""
         pep8s = pep8.StyleGuide(quiet=True)
         result = pep8s.check_files(['tests/test_models/test_user.py'])
