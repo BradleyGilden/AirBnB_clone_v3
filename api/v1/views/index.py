@@ -3,8 +3,8 @@
 """
 this view handles default responses from the API
 
-Author: Bradley Dillion Gilden
-Date: 26-10-2023
+Authors: Bradley Dillion Gilden & Kevin KevCare Mokobane
+Date: 29-10-2023
 """
 
 from api.v1.views import app_views
